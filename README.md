@@ -15,3 +15,7 @@ javascript.info (现代 Javascript) 学习笔记
 #### 1-3.代码编辑器 ✅(0531)
 
 #### 1-4.开发者控制台 ✅(0601)
+
+### 2.JavaScript 基础知识
+
+#### 2-1.Hello,world! ✅(0602)
