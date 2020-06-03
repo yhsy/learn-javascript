@@ -19,3 +19,5 @@ javascript.info (现代 Javascript) 学习笔记
 ### 2.JavaScript 基础知识
 
 #### 2-1.Hello,world! ✅(0602)
+
+#### 2-2.代码结构 ✅(0603)
