@@ -21,3 +21,5 @@ javascript.info (现代 Javascript) 学习笔记
 #### 2-1.Hello,world! ✅(0602)
 
 #### 2-2.代码结构 ✅(0603)
+
+#### 2-3.严格模式 use strict ✅(0604)
