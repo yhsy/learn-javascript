@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>任务3：大写的常量？</title>
+</head>
+
+<body>
+    <script>
+        // 检查下面的代码，是否使用大写方式正确？
+        const birthday = '18.04.1982';
+        const age = someCode(birthday);
+
+        // 推荐写法
+        // 因为生日是确定的，用常量
+        const BIRTHDAY = '18.04.1982';
+        // 年龄是通过生日计算出来的，所以不建议用大写
+        const age = someCode(birthday);
+    </script>
+</body>
+
+</html>
