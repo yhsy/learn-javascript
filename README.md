@@ -33,3 +33,5 @@ javascript.info (现代 Javascript) 学习笔记
 #### 2-7.运算符 ✅(0608)
 
 #### 2-8.值的比较 ✅(0609)
+
+#### 2-9.交互：alert、prompt、confirm ✅(0610)
