@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>任务4：使用 '?' 重写 'if' 语句</title>
+    <link rel="stylesheet" href="./css/task.css">
+
+</head>
+
+<body>
+
+    <div class="m-task">
+        <h2>任务4：使用 '?' 重写 'if' 语句</h2>
+        <p>使用条件运算符 '?' 重写下面的 if 语句：</p>
+        <pre>
+            let result;
+            
+            if (a + b < 4) { result='Below' ; } else { result='Over' ; }
+        </pre>
+    </div>
+    <div class="m-run">
+        <button id="run" class="btn-run">运行程序</button>
+        <div class="m-code" id="code" style="display:none;">
+            <h3>三元运算符方式：</h3>
+            <pre>
+                // 默认值: 假设a=1,b=2
+                const a = 1;
+                const b = 2;
+                let result = ( a + b < 4) ? 'Below' : 'Over';
+                
+                alert(result)
+            </pre>
+        </div>
+    </div>
+    <script>
+        const run = document.getElementById('run');
+        const code = document.getElementById('code');
+
+        run.addEventListener('click', function () {
+            code.style.display = 'block';
+
+            const a = 1;
+            const b = 2;
+            let result = (a + b < 4) ? 'Below' : 'Over';
+            alert(result)
+        })
+
+    </script>
+</body>
+
+</html>

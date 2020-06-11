@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>任务1：alert弹窗会弹出来吗？</title>
+    <link rel="stylesheet" href="./css/task.css">
+
+</head>
+
+<body>
+
+    <div class="m-task">
+        <h2>任务1：alert弹窗会弹出来吗？</h2>
+        <p>源码：</p>
+        <pre>
+            if ("0") {
+                alert( 'Hello' );
+            }
+            // 答案: 会
+        </pre>
+    </div>
+    <div class="m-run">
+        <button id="run" class="btn-run">运行程序</button>
+    </div>
+    <script>
+        const run = document.getElementById('run');
+        run.addEventListener('click', function () {
+            if ("0") {
+                alert('Hello');
+            }
+        })
+
+    </script>
+</body>
+
+</html>

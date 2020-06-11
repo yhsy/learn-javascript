@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>任务3：显示符号</title>
+    <link rel="stylesheet" href="./css/task.css">
+</head>
+
+<body>
+    <div class="m-task">
+        <h3>任务3：显示符号</h3>
+        <p>任务说明：使用 if..else 语句，编写代码实现通过 prompt 获取一个数字并用 alert 显示结果：</p>
+        <ul>
+            <li>如果这个数字大于 0，就显示 1，</li>
+            <li>如果这个数字小于 0，就显示 -1，</li>
+            <li>如果这个数字等于 0，就显示 0。</li>
+        </ul>
+        <p>在这个任务中，我们假设输入永远是一个数字。/p>
+    </div>
+
+    <div class="m-run">
+        <button id="run" class="btn-run">运行程序</button>
+    </div>
+
+    <script>
+        const run = document.getElementById('run');
+        run.addEventListener('click', function () {
+            const results = prompt('请输入一个数字', '');
+            if (results > 0) {
+                alert(1)
+            } else if (results < 0) {
+                alert(-1)
+            } else {
+                alert(0)
+            }
+        })
+    </script>
+</body>
+
+</html>
