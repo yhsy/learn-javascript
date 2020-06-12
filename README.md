@@ -37,3 +37,5 @@ javascript.info (现代 Javascript) 学习笔记
 #### 2-9.交互：alert、prompt、confirm ✅(0610)
 
 #### 2-10.条件运算符：if 和 ？✅(0611)
+
+#### 2-11.逻辑运算符 ✅(0612)
