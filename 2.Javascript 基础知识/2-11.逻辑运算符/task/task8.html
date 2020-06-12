@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>任务8：一个关于"if"的问题</title>
+  <link rel="stylesheet" href="./css/task.css">
+</head>
+<body>
+  <div class="m-task">
+    <h3>任务8：一个关于"if"的问题</h3>
+    <p>下面哪一个 alert 将会被执行？</p>
+    <p>if(...) 语句内表达式的结果是什么？</p>
+    <pre>
+        if (-1 || 0) alert( 'first' );
+        if (-1 && 0) alert( 'second' );
+        if (null || -1 && 1) alert( 'third' );
+    </pre>
+  </div>
+
+  <div class="m-result" id="result">
+    <pre>
+        if (-1 || 0) alert( 'first' );  => 打印 first
+        if (-1 && 0) alert( 'second' );  => 不打印
+        if (null || -1 && 1) alert( 'third' ); => 打印 third
+    </pre>
+  </div>
+
+  <div class="m-run">
+    <button class="btn-run" id="run">运行程序</button>
+  </div>
+
+  <script>
+    const run = document.getElementById('run');
+    const result = document.getElementById('result');
+    run.addEventListener('click',function(){
+      result.style.display = 'block';
+      if (-1 || 0) alert( 'first' );
+      if (-1 && 0) alert( 'second' );
+      if (null || -1 && 1) alert( 'third' );
+    })
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>任务5：或运算、与运算、或运算串联的结果？</title>
+  <link rel="stylesheet" href="./css/task.css">
+</head>
+<body>
+  <div class="m-task">
+    <h3>任务5：或运算、与运算、或运算串联的结果？</h3>
+    <p>如下代码将会输出什么？</p>
+    <pre>
+        alert( null || 2 && 3 || 4 );
+
+    </pre>
+  </div>
+
+  <div class="m-result" id="result">
+    <pre>
+      结果: 3
+      解题: 
+      1.因为 与运算&& 的运算优先级高，先计算 2 && 3, 返回 3
+      2.null || 3 || 4 , 返回3
+      3.弹出3
+    </pre>
+  </div>
+
+  <div class="m-run">
+    <button class="btn-run" id="run">运行程序</button>
+  </div>
+
+  <script>
+    const run = document.getElementById('run');
+    const result = document.getElementById('result');
+
+    run.addEventListener('click',function(){
+      result.style.display = 'block';
+      alert( null || 2 && 3 || 4 );
+
+    })
+  </script>
+  
+</body>
+</html>

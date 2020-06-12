@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>任务2：或运算和 alerts 的结果是什么？</title>
+  <link rel="stylesheet" href="./css/task.css">
+</head>
+<body>
+  <div class="m-task">
+    <h3>任务2：或运算和 alerts 的结果是什么？</h3>
+    <p>下面这段代码将会显示什么？</p>
+    <pre>
+        alert( alert(1) || 2 || alert(3) );
+    </pre>
+  </div>
+
+  <div class="m-result" id="result">
+    <pre>
+      结果: 首先是1，然后是2
+      alert没有返回值,或者说值是 undefined
+    </pre>
+  </div>
+
+  <div class="m-run">
+    <button class="btn-run" id="run">运行程序</button>
+  </div>
+
+  <script>
+    const run = document.getElementById('run');
+    const result = document.getElementById('result');
+    run.addEventListener('click',function(){
+      result.style.display = 'block';
+      alert( alert(1) || 2 || alert(3) );
+    })
+
+  </script>
+</body>
+</html>

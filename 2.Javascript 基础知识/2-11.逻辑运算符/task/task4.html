@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>任务4：与运算连接的 alerts 的结果是什么？</title>
+  <link rel="stylesheet" href="./css/task.css">
+</head>
+<body>
+  <div class="m-task">
+    <h3>任务4：与运算连接的 alerts 的结果是什么？</h3>
+    <p>下面这段代码将会显示什么？</p>
+    <pre>
+        alert( alert(1) && alert(2) );
+    </pre>
+  </div>
+
+  <div class="m-result" id="result">
+    <pre>
+      结果: 首先是1，然后 undefined
+      解题思路：默认先alert(1),然后alert(1)返回的是 undefined
+    </pre>
+  </div>
+
+  <div class="m-run">
+    <button class="btn-run" id="run">运行程序</button>
+  </div>
+
+  <script>
+    const run = document.getElementById('run');
+    const result = document.getElementById('result');
+    run.addEventListener('click',function(){
+      result.style.display = 'block';
+      alert( alert(1) && alert(2) );
+    })
+
+  </script>
+</body>
+</html>
