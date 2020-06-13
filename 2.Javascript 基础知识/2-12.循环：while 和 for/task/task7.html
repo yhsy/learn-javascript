@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>任务7：输出素数（prime）</title>
+    <link rel="stylesheet" href="./css/task.css" />
+</head>
+
+<body>
+    <div class="m-task">
+        <h3>任务6：输出素数（prime）</h3>
+        <ul>
+            <li>素数定义</li>
+            <li>1.大于 1 且不能被除了 1 和它本身以外的任何数整除的整数叫做素数。</li>
+            <li>2.换句话说，n > 1 且不能被 1 和 n 以外的任何数整除的整数，被称为素数。</li>
+            <li>3.例如，5 是素数，因为它不能被 2、3 和 4 整除，会产生余数。</li>
+        </ul>
+        <p>写一个可以输出 2 到 n 之间的所有素数的代码。</p>
+        <p>当 n = 10，结果输出 2、3、5、7。</p>
+        <p>P.S. 代码应适用于任何 n，而不是对任何固定值进行硬性调整。</p>
+    </div>
+
+    <div class="m-result" id="result">
+        <h3>代码：</h3>
+        <pre>
+            // let n = prompt('请输入大于2的整数', '');
+            let n = 10;
+
+            nextContinue:
+            for (let i = 2; i <= n; i++) { 
+                for (let j=2; j < n; j++) { 
+                    if (i % j===0) { continue nextContinue } 
+                } 
+                alert(i) // 输出素数 
+            }
+        </pre>
+    </div>
+
+    <div class="m-run">
+        <button class="btn-run" id="run">运行程序</button>
+    </div>
+
+    <script>
+        const run = document.getElementById("run");
+        const result = document.getElementById("result");
+        run.addEventListener("click", function () {
+            result.style.display = "block";
+            // let n = prompt('请输入大于2的整数', '');
+            let n = 10;
+
+            nextContinue:
+            for (let i = 2; i <= n; i++) {
+                for (let j = 2; j < n; j++) {
+                    if (i % j === 0) {
+                        continue nextContinue
+                    }
+                }
+                alert(i) // 输出素数
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>任务5：用 "while" 替换 "for"</title>
+    <link rel="stylesheet" href="./css/task.css" />
+</head>
+
+<body>
+    <div class="m-task">
+        <h3>任务5：用 "while" 替换 "for"</h3>
+        <p>重写代码，在保证不改变其行为的情况下，将 for 循环更改为 while（输出应保持不变）。</p>
+        <pre>
+            for (let i = 0; i < 3; i++) { 
+                alert( `number ${i}!` ); 
+            }
+        </pre>
+
+    </div>
+
+    <div class="m-result" id="result">
+        <h3>重写代码：</h3>
+        <pre>
+            let i = 0;
+            while (i < 3) { 
+                alert(`number ${i}!`); i++; 
+            }
+        </pre>
+    </div>
+
+    <div class="m-run">
+        <button class="btn-run" id="run">运行程序</button>
+    </div>
+
+    <script>
+        const run = document.getElementById("run");
+        const result = document.getElementById("result");
+        run.addEventListener("click", function () {
+            result.style.display = "block";
+            let i = 0;
+            while (i < 3) {
+                alert(`number ${i}!`);
+                i++;
+            }
+        });
+    </script>
+</body>
+
+</html>

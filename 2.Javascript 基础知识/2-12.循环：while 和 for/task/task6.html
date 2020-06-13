@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>任务6：重复输入，直到正确为止</title>
+    <link rel="stylesheet" href="./css/task.css" />
+</head>
+
+<body>
+    <div class="m-task">
+        <h3>任务6：重复输入，直到正确为止</h3>
+        <ul>
+            <li>编写一个提示用户输入大于 100 的数字的循环。如果用户输入其他数值 —— 请他重新输入。</li>
+            <li>循环一直在请求一个数字，直到用户输入了一个大于 100 的数字、取消输入或输入了一个空行为止。</li>
+            <li>在这我们假设用户只会输入数字。在本题目中，不需要对非数值输入进行特殊处理。</li>
+        </ul>
+    </div>
+
+    <div class="m-result" id="result">
+        <h3>代码：</h3>
+        <pre>
+            let num = prompt('请输入大于 100 的整数', '');
+            while (num < 100) { 
+                num=prompt('请输入大于 100 的整数', '' ); 
+            } 
+            if (num>= 100 || num === '') {
+                alert('输入正确')
+            }
+        </pre>
+    </div>
+
+    <div class="m-run">
+        <button class="btn-run" id="run">运行程序</button>
+    </div>
+
+    <script>
+        const run = document.getElementById("run");
+        const result = document.getElementById("result");
+        run.addEventListener("click", function () {
+            result.style.display = "block";
+            let num = prompt('请输入大于 100 的整数', '');
+            while (num < 100) {
+                num = prompt('请输入大于 100 的整数', '');
+            }
+            if (num >= 100 || num === '') {
+                alert('输入正确')
+            }
+            // 官方示例
+            // let num;
+
+            // do {
+            //     num = prompt("请输入大于 100 的整数", 0);
+            // } while (num <= 100 && num);
+        });
+    </script>
+</body>
+
+</html>

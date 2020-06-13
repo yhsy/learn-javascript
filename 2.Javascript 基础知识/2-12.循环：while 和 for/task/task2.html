@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>任务2：while 循环显示哪些值？</title>
+    <link rel="stylesheet" href="./css/task.css" />
+</head>
+
+<body>
+    <div class="m-task">
+        <h3>任务2：while 循环显示哪些值？</h3>
+        <p>对于每次循环，写出你认为会显示的值，然后与答案进行比较。</p>
+        <p>以下两个循环的 alert 值是否相同？</p>
+        <ul>
+            <li>
+                <h3>1.前缀形式 ++i</h3>
+                <pre>
+                    let i = 0;
+                    while (++i < 5) alert( i );
+                </pre>
+                <button class="btn-run" id="run1">运行程序(前缀)</button>
+
+            </li>
+            <li>
+                <h3>2.后缀形式 i++</h3>
+                <pre>
+                    let i = 0;
+                    while (i++ < 5) alert( i );
+                </pre>
+                <button class="btn-run" id="run2">运行程序(后缀)</button>
+
+
+            </li>
+        </ul>
+    </div>
+
+    <div class="m-result" id="result">
+        <pre>
+            总结果: 不相同
+            解题: 
+            1.前缀形式：结果是 1,2,3,4
+            2.后缀形式：结果是 1,2,3,4,5
+        </pre>
+    </div>
+
+
+    <script>
+        const run1 = document.getElementById("run1");
+        const run2 = document.getElementById("run2");
+
+        const result = document.getElementById("result");
+        // 前缀形式
+        run1.addEventListener("click", function () {
+            result.style.display = "block";
+            let i = 0;
+            while (++i < 5) alert(i);
+        });
+        // 后缀形式
+        run2.addEventListener("click", function () {
+            result.style.display = "block";
+            let i = 0;
+            while (i++ < 5) alert(i);
+        });
+    </script>
+</body>
+
+</html>
