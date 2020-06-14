@@ -41,3 +41,5 @@ javascript.info (现代 Javascript) 学习笔记
 #### 2-11.逻辑运算符 ✅(0612)
 
 #### 2-12.循环：while 和 for ✅(0613)
+
+#### 2-13.switch ✅(0614)
