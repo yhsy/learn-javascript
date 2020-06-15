@@ -43,3 +43,5 @@ javascript.info (现代 Javascript) 学习笔记
 #### 2-12.循环：while 和 for ✅(0613)
 
 #### 2-13.switch ✅(0614)
+
+#### 2-14.函数 ✅(0615)
