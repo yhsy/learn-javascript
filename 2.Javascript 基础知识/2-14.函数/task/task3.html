@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>任务3：函数min(a,b)</title>
+  <link rel="stylesheet" href="./css/task.css" />
+</head>
+
+<body>
+  <div class="m-task">
+    <h3>任务3：函数min(a,b)</h3>
+    <p>写一个返回数字 a 和 b 中较小的那个数字的函数 min(a,b)。</p>
+    <p>例如：</p>
+    <pre>
+      min(2, 5) == 2
+      min(3, -1) == -1
+      min(1, 1) == 1
+    </pre>
+  </div>
+  <div class="m-result" id="result">
+    <h3>代码：</h3>
+    <pre>
+        // 假设a和b都是数字
+        alert(min(2, 5));
+        alert(min(3, -1))
+        alert(min(1, 1))
+        function min(a, b) {
+          return a > b ? b : a;
+        };
+    </pre>
+  </div>
+
+  <div class="m-run">
+    <button class="btn-run" id="run">运行程序</button>
+  </div>
+
+  <script>
+    const run = document.getElementById("run");
+    const result = document.getElementById("result");
+    run.addEventListener("click", function () {
+      result.style.display = "block";
+      // 假设a和b都是数字
+      alert(min(2, 5));
+      alert(min(3, -1))
+      alert(min(1, 1))
+      function min(a, b) {
+        return a > b ? b : a;
+      };
+    })
+  </script>
+</body>
+
+</html>

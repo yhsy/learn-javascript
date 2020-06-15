@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>任务2：是否需要 "else"</title>
+  <link rel="stylesheet" href="./css/task.css" />
+</head>
+
+<body>
+  <div class="m-task">
+    <h3>任务2：使用 '?' 或者 '||' 重写函数</h3>
+    <p>如果参数 age 大于 18，那么下面的函数返回 true。</p>
+    <p>否则它将会要求进行确认，并返回确认结果：</p>
+    <pre>
+      function checkAge(age) {
+        if (age > 18) {
+          return true;
+        } else {
+          return confirm('Do you have your parents permission to access this page?');
+        }
+      }
+    </pre>
+
+    <p>重写这个函数并保证效果相同，不使用 if，且只需一行代码。</p>
+    <p>重写这个函数并保证效果相同，不使用 if，且只需一行代码。</p>
+    <ul>
+      <li>1.使用问号运算符 ?</li>
+      <li>2.使用或运算符 ||</li>
+    </ul>
+  </div>
+  <div class="m-result" id="result">
+    <h3>代码：</h3>
+    <pre>
+      // 1.使用问号 ？
+      function checkAge(age) {
+        return age > 18 ? true : confirm('Do you have your parents permission to access this page?');
+      }
+
+      // 2.使用或运算符 || 
+      function checkAge(age) {
+        return (age > 18) || confirm('Do you have your parents permission to access this page?');
+      }
+    </pre>
+  </div>
+
+  <div class="m-run">
+    <button class="btn-run" id="run">运行程序</button>
+  </div>
+
+  <script>
+    const run = document.getElementById("run");
+    const result = document.getElementById("result");
+    run.addEventListener("click", function () {
+      result.style.display = "block";
+
+      let age = prompt('请输入年龄？', '')
+      checkAge(age);
+      // 1.使用问号 ？
+      // function checkAge(age) {
+      //   return age > 18 ? true : confirm('Do you have your parents permission to access this page?');
+      // }
+
+      // 2.使用或运算符 || 
+      function checkAge(age) {
+        return (age > 18) || confirm('Do you have your parents permission to access this page?');
+      }
+
+    });
+  </script>
+</body>
+
+</html>

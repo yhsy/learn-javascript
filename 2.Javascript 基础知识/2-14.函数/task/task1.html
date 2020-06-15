@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>任务1：是否需要 "else"</title>
+  <link rel="stylesheet" href="./css/task.css" />
+</head>
+
+<body>
+  <div class="m-task">
+    <h3>任务1：是否需要 "else"</h3>
+    <p>如果参数 age 大于 18，那么下面的函数将返回 true。</p>
+    <p>否则它将会要求进行确认，并返回确认结果：</p>
+    <pre>
+      function checkAge(age) {
+        if (age > 18) {
+          return true;
+        } else {
+          // ...
+          return confirm('Did parents allow you?');
+        }
+      }
+    </pre>
+
+    <p>如果 else 被删除，函数的工作方式会不同吗？</p>
+    <pre>
+      function checkAge(age) {
+        if (age > 18) {
+          return true;
+        }
+        // ...
+        return confirm('Did parents allow you?');
+      }
+    </pre>
+    <p>这两个变体的行为是否有区别？</p>
+
+  </div>
+
+  <div class="m-result" id="result">
+    <h3>问题1：如果else被删除，函数的工作方式会不同吗?</h3>
+    <p>答:函数的结果是一样的,工作方式是一样</p>
+    <h3>问题2:这两个变体的行为是否有区别？</h3>
+    <p>答:没有区别</p>
+    <pre>
+
+    </pre>
+  </div>
+
+  <div class="m-run">
+    <button class="btn-run" id="run">运行程序</button>
+  </div>
+
+  <script>
+    const run = document.getElementById("run");
+    const result = document.getElementById("result");
+    run.addEventListener("click", function () {
+      result.style.display = "block";
+      let age = prompt('请输入年龄？', '')
+      checkAge(age);
+      function checkAge(age) {
+        if (age > 18) {
+          return true;
+        }
+        return confirm('Did parents allow you?');
+      }
+    });
+  </script>
+</body>
+
+</html>
