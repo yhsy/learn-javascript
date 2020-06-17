@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>任务1：用箭头函数重写</title>
+    <link rel="stylesheet" href="./css/task.css" />
+</head>
+
+<body>
+    <div class="m-task">
+        <h3>任务1：用箭头函数重写</h3>
+        <p>用箭头函数重写下面的函数表达式：</p>
+        <pre>
+            function ask(question, yes, no) {
+                if (confirm(question)) yes()
+                else no();
+            }
+            
+            ask(
+                "Do you agree?",
+                function() { alert("You agreed."); },
+                function() { alert("You canceled the execution."); }
+            );
+        </pre>
+    </div>
+    <div class="m-result" id="result">
+        <h3>代码：</h3>
+        <pre>
+            let ask = (question, yes, no) => {
+                confirm(question) ? yes() : no()
+            };
+            
+            ask(
+                "Do you agree?",
+                () => alert("You agreed."),
+                () => alert("You canceled the execution.")
+            );
+        </pre>
+    </div>
+
+    <div class="m-run">
+        <button class="btn-run" id="run">运行程序</button>
+    </div>
+
+    <script>
+        const run = document.getElementById("run");
+        const result = document.getElementById("result");
+        run.addEventListener("click", function () {
+            result.style.display = "block";
+
+            let ask = (question, yes, no) => {
+                confirm(question) ? yes() : no()
+            }
+
+            ask(
+                "Do you agree?",
+                () => alert("You agreed."),
+                () => alert("You canceled the execution.")
+            );
+        });
+    </script>
+</body>
+
+</html>
