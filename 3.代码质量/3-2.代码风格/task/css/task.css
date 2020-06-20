@@ -1,0 +1,12 @@
+.m-task {
+  margin-bottom: 20px;
+}
+.m-result{
+  display: none;
+}
+.btn-run {
+  margin-top: 30px;
+  width: 200px;
+  height: 50px;
+}
+

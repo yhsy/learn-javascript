@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>任务1：不好的风格</title>
+    <link rel="stylesheet" href="./css/task.css" />
+</head>
+
+<body>
+    <div class="m-task">
+        <h3>任务1：不好的风格</h3>
+        <p>下面的代码风格有什么问题？请修复它</p>
+        <pre>
+            function pow(x,n)
+            {
+                let result = 1;
+                for(let i = 0; i < n; i++) { result *= x; } return result; 
+            }
+            let x = prompt("x?",''), n = prompt("n?",'') 
+            if (n <= 0) 
+            { 
+                alert(`Power${n} is not supported, please enter an integer number greater than zero`); 
+            } 
+            else 
+            { 
+                alert(pow(x,n)) 
+            }
+        </pre>
+    </div>
+    <div class="m-result" id="result">
+        <h3>代码：</h3>
+        <pre>
+            let x = prompt("x?", '');
+            let n = prompt("n?", '');
+
+            if (n > 0) {
+                alert(pow(x, n))
+                return;
+            }
+            alert(`
+                Power${n} is not supported,
+                please enter an integer number greater than zero
+            `);
+
+            function pow(x, n) {
+                let result = 1;
+                for (let i = 0; i < n; i++) { 
+                    result *=x; 
+                }
+                return result; 
+            }
+        </pre>
+    </div>
+
+    <div class="m-run">
+        <button class="btn-run" id="run">运行程序</button>
+    </div>
+
+    <script>
+        const run = document.getElementById("run");
+        const result = document.getElementById("result");
+        run.addEventListener("click", function () {
+            result.style.display = "block";
+
+            let x = prompt("x?", '');
+            let n = prompt("n?", '');
+
+            if (n > 0) {
+                alert(pow(x, n))
+                return;
+            }
+            alert(`
+                Power${n} is not supported, 
+                please enter an integer number greater than zero
+            `);
+
+
+            function pow(x, n) {
+                let result = 1;
+                for (let i = 0; i < n; i++) {
+                    result *= x;
+                }
+                return result;
+            }
+        });
+    </script>
+</body>
+
+</html>
