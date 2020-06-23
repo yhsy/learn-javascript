@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>任务1：测试代码中有什么错误？</title>
+    <link rel="stylesheet" href="./css/task.css" />
+</head>
+
+<body>
+    <div class="m-task">
+        <h3>任务1：测试代码中有什么错误？</h3>
+        <p>下面这个 pow 的测试代码有什么错误？</p>
+        <pre>
+            it("Raises x to the power n", function() {
+                let x = 5;
+                
+                let result = x;
+                assert.equal(pow(x, 1), result);
+                
+                result *= x;
+                assert.equal(pow(x, 2), result);
+                
+                result *= x;
+                assert.equal(pow(x, 3), result);
+            });
+        </pre>
+        <p>附：从语法上来说这些测试代码是正确且通过的。</p>
+    </div>
+    <div class="m-result" id="result">
+        <h3>代码：</h3>
+        <pre>
+            // 方法1：
+            describe("Raises x to the power n", function () {
+                it("5 in the power of 1 equals 5", function () {
+                    assert.equal(pow(5, 1), 5);
+                });
+
+                it("5 in the power of 2 equals 25", function () {
+                    assert.equal(pow(5, 2), 25);
+                });
+
+                it("5 in the power of 3 equals 125", function () {
+                    assert.equal(pow(5, 3), 125);
+                });
+            });
+
+            // 方法2：
+
+            describe("raises x to power 5", function () { 
+                let x = 5;
+                
+                for (let i = 1; i <= 3; i++) { 
+                    makeTest(x, i); 
+                } 
+                function makeTest(x, y) { 
+                    let expected=1;
+                    for (let i=0; i < y; i++) {
+                        expected *=x; 
+                    } 
+                    it(`${x} in the power 3 is ${expected}`, function () {
+                        assert.equal(pow(x, y), expected); 
+                    }); 
+                } 
+            });
+
+            // 方法3：
+            describe("Raises x to power n", function() {
+                it("5 in the power of 1 equals 5", function() {
+                    assert.equal(pow(5, 1), 5);
+                });
+
+                // Mocha 将只运行这个代码块
+                it.only("5 in the power of 2 equals 25", function() {
+                    assert.equal(pow(5, 2), 25);
+                });
+
+                it("5 in the power of 3 equals 125", function() {
+                    assert.equal(pow(5, 3), 125);
+                });
+            });
+
+        </pre>
+    </div>
+
+    <div class="m-run">
+        <button class="btn-run" id="run">运行程序</button>
+    </div>
+
+    <script>
+        const run = document.getElementById("run");
+        const result = document.getElementById("result");
+        run.addEventListener("click", function () {
+            result.style.display = "block";
+
+            describe("Raises x to the power n", function () {
+
+
+
+                // it("5 in the power of 1 equals 5", function () {
+                //     assert.equal(pow(5, 1), 5);
+                // });
+
+                // it("5 in the power of 2 equals 25", function () {
+                //     assert.equal(pow(5, 2), 25);
+                // });
+
+                // it("5 in the power of 3 equals 125", function () {
+                //     assert.equal(pow(5, 3), 125);
+                // });
+            });
+        });
+    </script>
+</body>
+
+</html>
