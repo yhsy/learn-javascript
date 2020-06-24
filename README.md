@@ -63,3 +63,5 @@ javascript.info (现代 Javascript) 学习笔记
 #### 3-4.忍者代码 ✅(0622)
 
 #### 3-5.使用 Mocha 进行自动化测试 ✅(0623)
+
+#### 3-6.Polyfill ✅(0624)
