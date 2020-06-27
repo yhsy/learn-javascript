@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>任务4：对象属性之和</title>
+  <link rel="stylesheet" href="./css/task.css" />
+</head>
+
+<body>
+  <div class="m-task">
+    <h3>任务4：对象属性之和</h3>
+    <p>我们有一个保存着团队成员工资的对象：</p>
+
+    <pre>
+        let salaries = {
+          John: 100,
+          Ann: 160,
+          Pete: 130
+        }
+    </pre>
+    <p>写一段代码求出我们的工资总和，将计算结果保存到变量 sum。从所给的信息来看，结果应该是 390。</p>
+    <p>如果 salaries 是一个空对象，那结果就为 0。</p>
+  </div>
+  <div class="m-result" id="result">
+    <h3>代码：</h3>
+    <pre>
+        let salaries = {
+          John: 100,
+          Ann: 160,
+          Pete: 130
+        }
+        let sum = 0;
+  
+        for (key in salaries) {
+          sum += salaries[key]
+        }
+  
+        alert(sum)
+    </pre>
+  </div>
+
+  <div class="m-run">
+    <button class="btn-run" id="run">运行程序</button>
+  </div>
+
+  <script>
+    const run = document.getElementById("run");
+    const result = document.getElementById("result");
+    run.addEventListener("click", function () {
+      result.style.display = "block";
+
+      let salaries = {
+        John: 100,
+        Ann: 160,
+        Pete: 130
+      }
+      let sum = 0;
+
+      for (key in salaries) {
+        sum += salaries[key]
+      }
+
+      alert(sum)
+
+
+    });
+  </script>
+</body>
+
+</html>
