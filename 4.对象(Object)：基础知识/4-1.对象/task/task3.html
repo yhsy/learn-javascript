@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>任务3：不可变对象</title>
+  <link rel="stylesheet" href="./css/task.css" />
+</head>
+
+<body>
+  <div class="m-task">
+    <h3>任务3：不可变对象</h3>
+    <p>有可能改变用 const 声明的对象吗？你怎么看？</p>
+
+    <pre>
+            const user = {
+              name: "John"
+            };
+            
+            // 这样有效吗？
+            user.name = "Pete";
+
+        </pre>
+  </div>
+  <div class="m-result" id="result">
+    <h3>代码：</h3>
+    <pre>
+      // 有效,user是一个常量对象
+      // 一个被 const 修饰的对象是 可以 被修改。
+    </pre>
+  </div>
+
+  <div class="m-run">
+    <button class="btn-run" id="run">运行程序</button>
+  </div>
+
+  <script>
+    const run = document.getElementById("run");
+    const result = document.getElementById("result");
+    run.addEventListener("click", function () {
+      result.style.display = "block";
+
+
+
+    });
+  </script>
+</body>
+
+</html>
