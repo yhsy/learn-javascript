@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>任务5：数值属性都乘以2</title>
+  <link rel="stylesheet" href="./css/task.css" />
+</head>
+
+<body>
+  <div class="m-task">
+    <h3>任务5：数值属性都乘以2</h3>
+    <p>创建一个 multiplyNumeric(obj) 函数，把 obj 所有的数值属性都乘以 2。</p>
+
+    <pre>
+      // 在调用之前
+      let menu = {
+        width: 200,
+        height: 300,
+        title: "My menu"
+      };
+
+      multiplyNumeric(menu);
+
+      // 调用函数之后
+      menu = {
+        width: 400,
+        height: 600,
+        title: "My menu"
+      };
+    </pre>
+    <p>注意 multiplyNumeric 函数不需要返回任何值，它应该就地修改对象。</p>
+    <p>P.S. 用 typeof 检查值类型。</p>
+  </div>
+  <div class="m-result" id="result">
+    <h3>代码：</h3>
+    <pre>
+        // 在调用之前
+        let menu = {
+          width: 200,
+          height: 300,
+          title: "My menu"
+        };
+  
+        alert(JSON.stringify(multiplyNumeric(menu)));
+  
+        function multiplyNumeric(menu) {
+          for (key in menu) {
+            if (typeof menu[key] === 'number') {
+              menu[key] = menu[key] * 2;
+  
+            }
+          }
+          return menu;
+        }
+    </pre>
+  </div>
+
+  <div class="m-run">
+    <button class="btn-run" id="run">运行程序</button>
+  </div>
+
+  <script>
+    const run = document.getElementById("run");
+    const result = document.getElementById("result");
+    run.addEventListener("click", function () {
+      result.style.display = "block";
+
+      // 在调用之前
+      let menu = {
+        width: 200,
+        height: 300,
+        title: "My menu"
+      };
+
+      alert(JSON.stringify(multiplyNumeric(menu)));
+
+      function multiplyNumeric(menu) {
+        for (key in menu) {
+          if (typeof menu[key] === 'number') {
+            menu[key] = menu[key] * 2;
+
+          }
+        }
+        return menu;
+      }
+
+      // // 调用函数之后
+      // menu = {
+      //   width: 400,
+      //   height: 600,
+      //   title: "My menu"
+      // };
+
+    });
+  </script>
+</body>
+
+</html>
