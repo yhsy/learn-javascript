@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>任务4：创建一个计算器</title>
+  <link rel="stylesheet" href="./css/task.css" />
+</head>
+
+<body>
+  <div class="m-task">
+    <h3>任务4：创建一个计算器</h3>
+    <p>创建一个有三个方法的 calculator 对象：</p>
+    <ul>
+      <li>read() 提示输入两个值，并将其保存为对象属性。</li>
+      <li>sum() 返回保存的值的和。</li>
+      <li>mul() 将保存的值相乘并返回计算结果。</li>
+    </ul>
+    <pre>
+      let calculator = {
+        // ……你的代码……
+      };
+      
+      calculator.read();
+      alert( calculator.sum() );
+      alert( calculator.mul() );
+    </pre>
+  </div>
+  <div class="m-result" id="result">
+    <h3>代码：</h3>
+    <pre>
+      let calculator = {
+        read() {
+          this.a = +prompt('请输入a的值', '');
+          this.b = +prompt('请输入b的值', '')
+        },
+        sum() {
+          return this.a + this.b;
+        },
+        mul() {
+          return this.a * this.b;
+        }
+
+      };
+
+      calculator.read();
+      alert(calculator.sum());
+      alert(calculator.mul());
+    </pre>
+  </div>
+
+  <div class="m-run">
+    <button class="btn-run" id="run">运行程序</button>
+  </div>
+
+  <script>
+    const run = document.getElementById("run");
+    const result = document.getElementById("result");
+    run.addEventListener("click", function () {
+      result.style.display = "block";
+
+      let calculator = {
+        // ……你的代码……
+        read() {
+          this.a = +prompt('请输入a的值', '');
+          this.b = +prompt('请输入b的值', '')
+        },
+        sum() {
+          return this.a + this.b;
+        },
+        mul() {
+          return this.a * this.b;
+        }
+
+      };
+
+      calculator.read();
+      alert(calculator.sum());
+      alert(calculator.mul());
+    });
+  </script>
+</body>
+
+</html>
