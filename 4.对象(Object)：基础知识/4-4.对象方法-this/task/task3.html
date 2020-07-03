@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>任务3：在对象字面量中使用 "this"</title>
+  <link rel="stylesheet" href="./css/task.css" />
+</head>
+
+<body>
+  <div class="m-task">
+    <h3>任务3：在对象字面量中使用 "this"</h3>
+    <p>这里 makeUser 函数返回了一个对象。</p>
+    <p>访问 ref 的结果是什么？为什么？</p>
+    <pre>
+      function makeUser() {
+        return {
+          name: "John",
+          ref: this
+        };
+      };
+      
+      let user = makeUser();
+      
+      alert( user.ref.name ); // 结果是什么？
+    </pre>
+  </div>
+  <div class="m-result" id="result">
+    <h3>代码解析：</h3>
+    <pre>
+      结果：undefined;
+      原因：因为设置 this 的规则不考虑对象定义，只有调用那一刻才重要。
+    </pre>
+  </div>
+
+  <div class="m-run">
+    <button class="btn-run" id="run">运行程序</button>
+  </div>
+
+  <script>
+    const run = document.getElementById("run");
+    const result = document.getElementById("result");
+    run.addEventListener("click", function () {
+      result.style.display = "block";
+    });
+  </script>
+</body>
+
+</html>
