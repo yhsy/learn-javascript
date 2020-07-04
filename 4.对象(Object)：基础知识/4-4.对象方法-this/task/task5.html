@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>任务5：链式调用</title>
+  <link rel="stylesheet" href="./css/task.css" />
+</head>
+
+<body>
+  <div class="m-task">
+    <h3>任务5：链式调用</h3>
+    <p>有一个可以上下移动的 ladder 对象：</p>
+    <pre>
+      let ladder = {
+        step: 0,
+        up() {
+          this.step++;
+        },
+        down() {
+          this.step--;
+        },
+        showStep: function() { // 显示当前的 step
+          alert( this.step );
+        }
+      };
+    </pre>
+    <p>现在，如果我们要按顺序执行几次调用，可以这样做：</p>
+    <pre>
+      ladder.up();
+      ladder.up();
+      ladder.down();
+      ladder.showStep(); // 1
+    </pre>
+    <p>修改 up，down 和 showStep 的代码，让调用可以链接，就像这样：</p>
+    <pre>
+      ladder.up().up().down().showStep(); // 1
+    </pre>
+  </div>
+  <div class="m-result" id="result">
+    <h3>代码：</h3>
+    <pre>
+      let ladder = {
+        step: 0,
+        up() {
+          this.step++;
+          return this;
+        },
+        down() {
+          this.step--;
+          return this;
+        },
+        showStep: function() { // 显示当前的 step
+          alert( this.step );
+          return this;
+        }
+      };
+    </pre>
+  </div>
+
+  <div class="m-run">
+    <button class="btn-run" id="run">运行程序</button>
+  </div>
+
+  <script>
+    const run = document.getElementById("run");
+    const result = document.getElementById("result");
+    run.addEventListener("click", function () {
+      result.style.display = "block";
+
+      let ladder = {
+        step: 0,
+        up() {
+          this.step++;
+          return this;
+        },
+        down() {
+          this.step--;
+          return this;
+        },
+        showStep() {
+          alert(this.step);
+          return this;
+        }
+      }
+
+      ladder.up().up().down().up().down().showStep(); // 1
+    });
+  </script>
+</body>
+
+</html>
