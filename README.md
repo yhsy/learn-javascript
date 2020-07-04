@@ -74,6 +74,6 @@ javascript.info (现代 Javascript) 学习笔记
 
 #### 4-3.Symbol 类型 ✅(0629)
 
-#### 4-4.对象方法:this ✅(0630)
+#### 4-4.对象方法-this ✅(0630)
 
 
