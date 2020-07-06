@@ -76,4 +76,6 @@ javascript.info (现代 Javascript) 学习笔记
 
 #### 4-4.对象方法-this ✅(0630-0704)
 
+#### 4-5.构造器和操作符new
+
 
